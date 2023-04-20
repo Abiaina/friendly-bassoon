@@ -1,4 +1,4 @@
-# friendly-bassoon
+# Python Data Structure Review
 
 
 Python data structures notes, basic actions and solved problems for interview prep
