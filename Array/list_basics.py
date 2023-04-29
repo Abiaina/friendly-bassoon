@@ -91,14 +91,20 @@ deep_copy_list.sort(reverse=True)
 print(f"Reverse sorted list: {deep_copy_list}")
 print(f"Original list: {ll}")
 
+# Join & Split
+ll = " ".join(ll)
+print(f"Joined list (type string): {ll}")
+# Split string into list.
+ll = ll.split(" ")
+ll[-2] = " ".join(ll[-2:])
+ll.pop()
+print(f"Original list (from split()): {ll}")
 
-# # Note that ll is still a list object until converted back to string. The join returns a copy.
-# ll = "".join(ll)
-# print(ll)
-# # Undo reverse.
-# ll = ll[::-1]
-
-# # Replace
-# # Notice the switch from "" to ' in the replace command.
-# print(f"This is string with replace: {ll.replace('t', 'OOO')}")
-# print(f"Original list {ll}")
+# Replace
+# Use the index in list to replace the element.
+# For full replace by element, use enumerate() and iterate through list.
+print(f"Original list, no replacements: {ll}")
+for i, v in enumerate(ll):
+    if v == "a":
+        ll[i] = "replaced value"
+print(f"See 'a' element replaced by new value: {ll}")

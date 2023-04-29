@@ -20,7 +20,8 @@ Organize data.
 
 ## Set
 
-- Unordered, **mutable** and unindexed. No duplicate members.
+- Unordered, **mutable** and **unindexed**. No duplicate members. instantiate `{"apple"}`.
+- Cannot not be iterated or changed by indexed.
 
 ## Methods
 
@@ -31,15 +32,26 @@ _Time_
 - `len(a)` : _0(1)_,
 - `"free" in a`
 
+### Dict
+
+- `a.update({"key": "val"})` : Updates dict with specificied key-value pair. Adds new or replaces existing value.
+- `a.keys()` : Returns list of keys.
+- `a.values()`: Returns list of values
+- `a.get(key)`: Gets value by key w/o error (`a[key]` raises error if no key).
+- `dict.fromkeys()` : Returns dict with specfied keys and value (default None). Takes iterable for keys, single value for all values. Note `a` is not used.
+
 ### List
 
 - `a.append(b)`: Adds element (b) to end of list a
-- `a.clear()` : Removes all the elements from the list
-- `a.copy()` : Returns copy of the list
+- `a.clear()` : Removes all the elements from the **list & dict**.
+- `a.copy()` : Returns copy of the **list & dict**
   - Shallow/deep copies: `a.copy()` returns a shallow copy of a. `a.deepcopy()` returns a deep copy of a.
-  - When modifying the original list after a copy, the changes will only show up in the shallow copy and original list. Shallow copy still references original list for nested elements. Deep copy won't reflect these changes.
-- `a.count(b)`: Count of element b in list a.
-- `a.pop()`
+  - When modifying the original **list & dict** after a copy, the changes will only show up in the shallow copy and original **list & dict**. Shallow copy still references original **list & dict** for nested elements. Deep copy won't reflect these changes.
+- `a.count(b)` : Returns the count of b in a. **list & tuple**
+- `a.index(b)` : Returns the index of element in a. **list & tuple**
+- `a.pop()`: **list & dict & set (from [0])** (_not tuples_)
+  - **dict**: Removes element by key. `a.pop(key)`.
+    - `a.popitem()` : Removes last inserted key-val pair. Returns them as tuple.
 - `a.remove()` : Removes the first element with the specified value
 
 ##### Reverse
@@ -65,29 +77,37 @@ _Time_
     - `a = ['W', 'o', 'r', 'l', 'd']`
     - `['W', 'o', 'r']`
 
-#### Sort
+##### Sort
 
 - `sorted(a)`: returns a sorted list, copy.
 - `a.sort()`: sort list in place. Timsort algorithm _O(n.logn)_ . Optional argument `reverse=True`.
 
-#### Remove
+##### Remove
 
 - `a.remove('b')`: Remove first instance of b in list.
 - `del a[0]`: remove element at index 0 of list.
 - `a.pop`: Remove last element from list.
 
-#### Add
+##### Add
 
 - `a.insert(i, "b")` : Insert "b" at position `i` of list. If `i` is out of range of list, it goes to the closest position (ie index 10 of length 5 list, inserted at 5(end of list)).
 - `a + [b]` : Combines lists, can only concatenate lists. Doesn't modify existing list, act on copy.
 - `a.append(b)` : Adds to end of list, item can be any data object type.
 
-#### Join
+##### Join
 
-- `",".join(myTuple)`: Join all items into string in tuple separated by ",". This joins any iterable into a string.
-- `a.count("apple")`: counts the number of times apple appears in a string a.
-- `a.encode()` : encodes the string (default is UTF-8).
-- `a.endswith(".")` : Checks if string ends with a substring.
+- `"".join(a)`: Join all items into string separated by "". This joins any iterable into a string, but items must be string type. Returns copy.
+
+### Set
+
+- `a.add(b)` : Can only add <b> once, set has no repeats.
+
+### Tuple
+
+**Tuple is unmutable**
+
+- `a.count(b)` : Returns the count of b in a. **list & tuple**
+- `a.index(b)` : Returns the index of element in a. **list & tuple**
 
 ## TODO: Make table of common methods + Space/Time Complexity.
 
