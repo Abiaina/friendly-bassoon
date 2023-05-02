@@ -43,8 +43,8 @@ _Time_
 ### List
 
 - `a.append(b)`: Adds element (b) to end of list a
-- `a.clear()` : Removes all the elements from the **list & dict**.
-- `a.copy()` : Returns copy of the **list & dict**
+- `a.clear()` : Removes all the elements from the **list & dict & set**.
+- `a.copy()` : Returns copy of the **list & dict & set**
   - Shallow/deep copies: `a.copy()` returns a shallow copy of a. `a.deepcopy()` returns a deep copy of a.
   - When modifying the original **list & dict** after a copy, the changes will only show up in the shallow copy and original **list & dict**. Shallow copy still references original **list & dict** for nested elements. Deep copy won't reflect these changes.
 - `a.count(b)` : Returns the count of b in a. **list & tuple**
