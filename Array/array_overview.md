@@ -101,6 +101,8 @@ _Time_
 ### Set
 
 - `a.add(b)` : Can only add <b> once, set has no repeats.
+- `a.pop()` : Removes element from set, returns removed element.
+- `a.remove(b)` : Removes specific element from set.
 
 ### Tuple
 
