@@ -44,10 +44,12 @@ _Time_
   - You can still use `a.append(b)`, `a.pop()` and `a.popleft()` on the deque object.
 - Que is a list, see list methods for other actions.
 
-| Method              | Time | Space | Description                                              |
-| ------------------- | ---- | ----- | -------------------------------------------------------- |
-| Que `a.pop()`       | O(n) | O(1)  | Returns removed item                                     |
-| Que `a.append(b)`   | O(1) | O(1)  |                                                          |
-| Que `a.popleft()`   | O(1) | O(1)  | Convert list to deque object, import from `collections`. |
-| Stack `a.pop()`     | O(1) | O(1)  |                                                          |
-| Stack `a.append(b)` | O(1) | O(1)  |                                                          |
+| Method        | Time | Space | Description                                              |
+| ------------- | ---- | ----- | -------------------------------------------------------- |
+| **Que**       |
+| `a.pop()`     | O(n) | O(1)  | Returns removed item                                     |
+| `a.append(b)` | O(1) | O(1)  |                                                          |
+| `a.popleft()` | O(1) | O(1)  | Convert list to deque object, import from `collections`. |
+| **Stack**     |
+| `a.pop()`     | O(1) | O(1)  |                                                          |
+| `a.append(b)` | O(1) | O(1)  |                                                          |
