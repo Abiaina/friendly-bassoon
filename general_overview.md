@@ -1,5 +1,10 @@
 # Python General Overview
 
+## Compare Data Types
+
+TODO table???
+list vs linked list
+
 ## Methods
 
 Where a is the variable.
