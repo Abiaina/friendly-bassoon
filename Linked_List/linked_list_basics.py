@@ -40,13 +40,15 @@ while current:
     print(f"Iterative loop node data: {current.data}")
     current = current.next
 
+print(f"Recursive loop node data")
+
 
 # Recursive
 def print_node(noodle):
     if not noodle:
         return
     else:
-        print(f"Recursive loop node data: {noodle.data}")
+        print(noodle.data)
         print_node(noodle.next)
 
 
@@ -106,18 +108,102 @@ print("See added node in end.")
 print_node(ll.head)
 
 # Not front or end
+current = ll.head
+while ll_count > 2:
+    current = current.next
+    ll_count -= 1
+
+next = current.next
+current.next = NewNode("Add me to somewhere")
+current.next.next = next
 
 ## Delete from Linked List
-
+print("Original Linked list.")
+print_node(ll.head)
 # Remove by order
+# Remove 3rd node.
+current = ll.head
+last = None
+count = 0
+print("Removed 3rd Node.")
+while count < 2:
+    count += 1
+    last = current
+    current = current.next
+print(f"Removed Node: {current.data}")
+last.next = current.next
+print_node(ll.head)
 
 # Remove by value
+last = None
+current = ll.head
+while current:
+    if current.data == "Add me to somewhere":
+        last.next = current.next
+        break
+    last = current
+    current = current.next
+print(f"Removed Node: {current.data}")
+print_node(ll.head)
 
 ## Reverse Linked List.
 # Reverse with copy
+nodes = []
+current = ll.head
+while current:
+    nodes.append(current.data)
+    current = current.next
+current = ll.head
+nodes = nodes[::-1]
+for n in nodes:
+    current.data = n
+    current = current.next
+
+print("Reversed linked list, uses space.")
+print_node(ll.head)
 
 # Reverse in place.
+last = None
+next = None
+current = ll.head
+while current:
+    next = current.next
+    current.next = last
+    last = current
+    current = next
+ll.head = last
+print("Reverse in place.")
+print_node(ll.head)
 
 ## Replace value.
+current = ll.head
+while current:
+    if current.data == "Add me to End!":
+        current.data = "This is the end."
+        break
+    current = current.next
+print("Replaced Node Value.")
+print_node(ll.head)
 
 ## Sort
+# Create list of data + sort them.
+# Put back in linked list.
+# Remember when using sort, case matters.
+# Upper case before lower case.
+sort_list = []
+current = ll.head
+while current:
+    sort_list.append(current.data.lower())
+    current = current.next
+sort_list.sort()
+current = ll.head
+for sl in sort_list:
+    current.data = sl
+    current = current.next
+
+print("Print sorted linked list:")
+print_node(ll.head)
+
+
+# Merge 2 linked list
+# Find Midpoint

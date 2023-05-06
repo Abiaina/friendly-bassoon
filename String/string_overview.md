@@ -54,6 +54,8 @@ _Time_
 
 #### Sort
 
+**Remember when using sort, case matters.** Uppercase before lowercase.
+
 - `sorted(a)`: works on strings, but it returns a copy of the string as a sorted list.
 - `a.sort()`: doesn't work on strings, convert string to a list (this is a copy) and then call sort on that list.
 

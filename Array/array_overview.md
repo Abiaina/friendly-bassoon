@@ -79,6 +79,8 @@ _Time_
 
 ##### Sort
 
+**Remember when using sort, case matters.** Uppercase before lowercase. Cannot sort across types (all the elements need to be the same type).
+
 - `sorted(a)`: returns a sorted list, copy.
 - `a.sort()`: sort list in place. Timsort algorithm _O(n.logn)_ . Optional argument `reverse=True`.
 
