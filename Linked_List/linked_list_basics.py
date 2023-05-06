@@ -203,7 +203,3 @@ for sl in sort_list:
 
 print("Print sorted linked list:")
 print_node(ll.head)
-
-
-# Merge 2 linked list
-# Find Midpoint
