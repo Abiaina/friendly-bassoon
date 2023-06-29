@@ -113,7 +113,7 @@ _Time_
 - `a.count(b)` : Returns the count of b in a. **list & tuple**
 - `a.index(b)` : Returns the index of element in a. **list & tuple**
 
-## TODO: Make table of common methods + Space/Time Complexity.
+## Comparing Common List Methods
 
 | Method      | Time       | Space    | Description                                   |
 | ----------- | ---------- | -------- | --------------------------------------------- |
