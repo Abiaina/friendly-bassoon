@@ -115,9 +115,8 @@ _Time_
 
 ## TODO: Make table of common methods + Space/Time Complexity.
 
-| Method                 | Time       | Space    | Description                                                                             |
-| ---------------------- | ---------- | -------- | --------------------------------------------------------------------------------------- |
-| `a.sort()`             | O(nlog(n)) | O(n)     | First make copy of string into list. Then call sort list in place and join into string. |
-| `sorted(a)`            | O(nlog(n)) | O(n)     | Make copy of string into sorted list. Sort list in place.                               |
-| `"".join(reversed(a))` | _O(n)_     | **O(n)** | returns a copy reversed string. Using slice `a[::-1]` does the same _O(n)_ **O(1)**.    |
-| `a[::-1]`              | _O(n)_     | **O(1)** | Returns a copy reversed string with slice.                                              |
+| Method      | Time       | Space    | Description                                   |
+| ----------- | ---------- | -------- | --------------------------------------------- |
+| `a.sort()`  | O(nlog(n)) | O(1)     | Sort list in place, timsort, returns nothing. |
+| `sorted(a)` | O(nlog(n)) | O(n)     | Returns copy of sorted list                   |
+| `a[::-1]`   | _O(n)_     | **O(1)** | Returns a copy reversed string with slice.    |
