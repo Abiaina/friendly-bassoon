@@ -49,7 +49,7 @@ _Time_
   - When modifying the original **list & dict** after a copy, the changes will only show up in the shallow copy and original **list & dict**. Shallow copy still references original **list & dict** for nested elements. Deep copy won't reflect these changes.
 - `a.count(b)` : Returns the count of b in a. **list & tuple**
 - `a.index(b)` : Returns the index of element in a. **list & tuple**
-- `a.pop()`: **list & dict & set (from [0])** (_not tuples_)
+- `a.pop()`: **list & dict & set (from [-1])** (_not tuples_)
   - **dict**: Removes element by key. `a.pop(key)`.
     - `a.popitem()` : Removes last inserted key-val pair. Returns them as tuple.
 - `a.remove()` : Removes the first element with the specified value
